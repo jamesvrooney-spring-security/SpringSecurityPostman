@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "88fabcf8-33fd-42ec-86cb-c9ff99d06ba4",
+		"name": "Spring Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1644273"
+	},
+	"item": [
+		{
+			"name": "Dan Vega | YouTube",
+			"item": [
+				{
+					"name": "JPA | Postgres",
+					"item": [
+						{
+							"name": "Get all posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8181/api/posts",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test HomeController",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8181/admin",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"admin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "JWT | Basic Auth",
+					"item": [
+						{
+							"name": "Hello",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiamFtZXMiLCJleHAiOjE2NzE3MzQ3ODAsImlhdCI6MTY3MTczMTE4MCwic2NvcGUiOiJyZWFkIn0.HIp1kxLKK0zvIYnRvOH8pBoCihxCil1aSOVQXKIZMBoz35aAhrLdTuWnMz-PnK2jAP-tfZ19KPd87u6DJ8iD171fSHbmoQEtOtoDxRC_txSrd6HO7XIDbJG-sGk3HKyaWDHgbwaj7TiI6Zwx18pNNG9iGKvJrQk4wY71XblDUzQx1cNRfotAuZ0ZNNNLUY1AK6oWxDeD4oJH7iztb7J6dhK6Q2yVgNqiM9RgoFSg3CH_nDBS0jVAy4ZoDaBukXXbYZyY_Qc-Vm_VG8UUoDiLY18LhdnB4B5zvZFxcWZq1-RgD4fM2xO3fJdt3L2aTuL3K9R2B0lYwvjB5_OwpVdxZw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080",
+									"host": [
+										"localhost"
+									],
+									"port": "8080"
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get jwt",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "james",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/token",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "[Dan's YouTube Channel](https://www.youtube.com/@DanVega)\n\n[Spring Security Playlist](https://www.youtube.com/playlist?list=PLZV0a2jwt22s5NCKOwSmHVagoDW8nflaC)\n\n[Dan's Tech Blog](https://www.danvega.dev/blog)"
+		},
+		{
+			"name": "Laur Spilca | YouTube",
+			"item": [
+				{
+					"name": "Spring Security Fundamentals - 2020",
+					"item": [],
+					"description": "[Spring Security Fundamentals - 2020](https://www.youtube.com/playlist?list=PLEocw3gLFc8XRaRBZkhBEZ_R3tmvfkWZz)"
+				},
+				{
+					"name": "Spring Security Fundamentals - 2022",
+					"item": [
+						{
+							"name": "Lesson 01",
+							"item": []
+						},
+						{
+							"name": "Lesson 02",
+							"item": [
+								{
+									"name": "test",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "james",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "register",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"james2\",\n    \"password\": \"password2\",\n    \"authorities\": [\n        {\n            \"name\": \"read\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/register",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"register"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 03",
+							"item": [
+								{
+									"name": "hello",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 04",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "james",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 05",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Hello",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 08",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Hello",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 10",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "john",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Hello",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "[Spring Security Fundamentals | Github](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmlKWUVROW9aNlB4UGxnT2tkQVVOZEZiSEFqd3xBQ3Jtc0trWmwtV1hJZTBVYVBabXQyb19rSUkyMGt0U1JCYmw1SUlEV09aUl81QVcxVDNkdzZGRXNvdUlJM2VhTTBMOEVOTjgtOUtiNVNPTHVJUWRIYUtQUVp3RFRPTEVZaGhCS2t4SGtLTXJVRTc5WGRWQ1VuWQ&q=https://github.com/lspil/youtubechannel/tree/master/ss_2022_c1_e1&v=nSu9ElsnNtY)\n\n[Spring Security Fundamentals - 2022](https://www.youtube.com/playlist?list=PLEocw3gLFc8X_a8hGWGaBnSkPFJmbb8QP)"
+				}
+			]
+		}
+	]
+}
