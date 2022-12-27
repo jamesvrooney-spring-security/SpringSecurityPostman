@@ -521,8 +521,282 @@
 						}
 					],
 					"description": "[Spring Security Fundamentals | Github](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmlKWUVROW9aNlB4UGxnT2tkQVVOZEZiSEFqd3xBQ3Jtc0trWmwtV1hJZTBVYVBabXQyb19rSUkyMGt0U1JCYmw1SUlEV09aUl81QVcxVDNkdzZGRXNvdUlJM2VhTTBMOEVOTjgtOUtiNVNPTHVJUWRIYUtQUVp3RFRPTEVZaGhCS2t4SGtLTXJVRTc5WGRWQ1VuWQ&q=https://github.com/lspil/youtubechannel/tree/master/ss_2022_c1_e1&v=nSu9ElsnNtY)\n\n[Spring Security Fundamentals - 2022](https://www.youtube.com/playlist?list=PLEocw3gLFc8X_a8hGWGaBnSkPFJmbb8QP)"
+				},
+				{
+					"name": "Spring Security in Action | Book",
+					"item": []
 				}
 			]
+		},
+		{
+			"name": "OAuth 2.0 | Udemy",
+			"item": [
+				{
+					"name": "Section 02",
+					"item": []
+				},
+				{
+					"name": "Section 03",
+					"item": []
+				},
+				{
+					"name": "Section 04",
+					"item": []
+				},
+				{
+					"name": "Section 08",
+					"item": [
+						{
+							"name": "Code Grant Authorize",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8181/realms/appsdeveloperblog/protocol/openid-connect/auth?client_id=photo-app-code-flow-client&response_type=code&scope=openid profile&redirect_uri=http://localhost:8083/callback&state=randomletters",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"realms",
+										"appsdeveloperblog",
+										"protocol",
+										"openid-connect",
+										"auth"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": "photo-app-code-flow-client"
+										},
+										{
+											"key": "response_type",
+											"value": "code"
+										},
+										{
+											"key": "scope",
+											"value": "openid profile"
+										},
+										{
+											"key": "redirect_uri",
+											"value": "http://localhost:8083/callback"
+										},
+										{
+											"key": "state",
+											"value": "randomletters"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Exchange Code for Token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "authorization_code",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "photo-app-code-flow-client",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "7PpMRo28ELEYwaJlBNp2oJxLrPKLessS",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "a2e2b7e5-bedf-4c9d-9245-48ecb53edb96.1864a59b-9aa9-4fc7-95f6-1964f208cf4f.1c6651d6-4f3d-4328-8ad8-35fcb5d9cdba",
+											"type": "text"
+										},
+										{
+											"key": "redirect_uri",
+											"value": "http://localhost:8083/callback",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "randomletters",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "openid profile",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8181/realms/{{realm}}/protocol/openid-connect/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"realms",
+										"{{realm}}",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Users Status Check",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJQNzFZaVhWcUJiQTl1a09vcXJmVW14YlRMZzZOSlQ4OW9PWkllbTB3cUY0In0.eyJleHAiOjE2NDg2NDYzMTgsImlhdCI6MTY0ODY0NjAxOCwiYXV0aF90aW1lIjoxNjQ4NjQ1ODE5LCJqdGkiOiIxNGFlODlkMi01OTkzLTRhOWYtYTc0Yi1jOTExOWQ4MzE3M2UiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODEvcmVhbG1zL2phbWVzLXRlc3QtcmVhbG0tMDEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjE1Y2M5MTAtM2YxYS00NGMyLTgzNGEtMDlmMDU0ZDllOWM4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicGhvdG8tYXBwLWNvZGUtZmxvdy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiNDcyMmY1MzQtMWM3My00N2YzLThhNmMtNzZjMmE1NWNhZWQ5IiwiYWNyIjoiMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1qYW1lcy10ZXN0LXJlYWxtLTAxIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ3MjJmNTM0LTFjNzMtNDdmMy04YTZjLTc2YzJhNTVjYWVkOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkphbWVzIFJvb25leSIsInByZWZlcnJlZF91c2VybmFtZSI6ImphbWVzdnJvb25leSIsImdpdmVuX25hbWUiOiJKYW1lcyIsImZhbWlseV9uYW1lIjoiUm9vbmV5IiwiZW1haWwiOiJqYW1lc3Zyb29uZXlAaG90bWFpbC5jb20ifQ.LPdWjYsDPTj9F9eZrxsgqqJEeM2RoDE6pRA7frf0gW3MVrUVU_a-CZ9b5xTWUUf62iDYCNPCbK1MK5YPsBYKBc1HH9eoE1F3nEhvPSFOjRJAKrXjCQBMRgd_74doKBjqQxyOHZIiUwOrzSR-Uw6wqCjXgjZqFHS4za_0XhxCO13Yoi8pETgPFNd6jy39liVoeYRLxA3d1kfarBvZOkC6VPrBQba_SQ4mfc8Dd89-PzRGr1x297LD8iapKZbQg8msSESz_X9xbKa6g1NwUsGnrjvNGbGGO33XYhU3j1LgAj3i-Yq3uKVgoeFkpDV33GatupRuH0uqe9pIMlMr9Qcd-w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8282/users/status/check",
+									"host": [
+										"localhost"
+									],
+									"port": "8282",
+									"path": [
+										"users",
+										"status",
+										"check"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "OpenID Configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/realms/{{realm}}/.well-known/openid-configuration",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"realms",
+								"{{realm}}",
+								".well-known",
+								"openid-configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJQNzFZaVhWcUJiQTl1a09vcXJmVW14YlRMZzZOSlQ4OW9PWkllbTB3cUY0In0.eyJleHAiOjE2NDg2NDYzMTgsImlhdCI6MTY0ODY0NjAxOCwiYXV0aF90aW1lIjoxNjQ4NjQ1ODE5LCJqdGkiOiIxNGFlODlkMi01OTkzLTRhOWYtYTc0Yi1jOTExOWQ4MzE3M2UiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODEvcmVhbG1zL2phbWVzLXRlc3QtcmVhbG0tMDEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjE1Y2M5MTAtM2YxYS00NGMyLTgzNGEtMDlmMDU0ZDllOWM4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicGhvdG8tYXBwLWNvZGUtZmxvdy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiNDcyMmY1MzQtMWM3My00N2YzLThhNmMtNzZjMmE1NWNhZWQ5IiwiYWNyIjoiMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1qYW1lcy10ZXN0LXJlYWxtLTAxIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ3MjJmNTM0LTFjNzMtNDdmMy04YTZjLTc2YzJhNTVjYWVkOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkphbWVzIFJvb25leSIsInByZWZlcnJlZF91c2VybmFtZSI6ImphbWVzdnJvb25leSIsImdpdmVuX25hbWUiOiJKYW1lcyIsImZhbWlseV9uYW1lIjoiUm9vbmV5IiwiZW1haWwiOiJqYW1lc3Zyb29uZXlAaG90bWFpbC5jb20ifQ.LPdWjYsDPTj9F9eZrxsgqqJEeM2RoDE6pRA7frf0gW3MVrUVU_a-CZ9b5xTWUUf62iDYCNPCbK1MK5YPsBYKBc1HH9eoE1F3nEhvPSFOjRJAKrXjCQBMRgd_74doKBjqQxyOHZIiUwOrzSR-Uw6wqCjXgjZqFHS4za_0XhxCO13Yoi8pETgPFNd6jy39liVoeYRLxA3d1kfarBvZOkC6VPrBQba_SQ4mfc8Dd89-PzRGr1x297LD8iapKZbQg8msSESz_X9xbKa6g1NwUsGnrjvNGbGGO33XYhU3j1LgAj3i-Yq3uKVgoeFkpDV33GatupRuH0uqe9pIMlMr9Qcd-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/users/status/check",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"users",
+								"status",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJQNzFZaVhWcUJiQTl1a09vcXJmVW14YlRMZzZOSlQ4OW9PWkllbTB3cUY0In0.eyJleHAiOjE2NDg2NDYzMTgsImlhdCI6MTY0ODY0NjAxOCwiYXV0aF90aW1lIjoxNjQ4NjQ1ODE5LCJqdGkiOiIxNGFlODlkMi01OTkzLTRhOWYtYTc0Yi1jOTExOWQ4MzE3M2UiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODEvcmVhbG1zL2phbWVzLXRlc3QtcmVhbG0tMDEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjE1Y2M5MTAtM2YxYS00NGMyLTgzNGEtMDlmMDU0ZDllOWM4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicGhvdG8tYXBwLWNvZGUtZmxvdy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiNDcyMmY1MzQtMWM3My00N2YzLThhNmMtNzZjMmE1NWNhZWQ5IiwiYWNyIjoiMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1qYW1lcy10ZXN0LXJlYWxtLTAxIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ3MjJmNTM0LTFjNzMtNDdmMy04YTZjLTc2YzJhNTVjYWVkOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkphbWVzIFJvb25leSIsInByZWZlcnJlZF91c2VybmFtZSI6ImphbWVzdnJvb25leSIsImdpdmVuX25hbWUiOiJKYW1lcyIsImZhbWlseV9uYW1lIjoiUm9vbmV5IiwiZW1haWwiOiJqYW1lc3Zyb29uZXlAaG90bWFpbC5jb20ifQ.LPdWjYsDPTj9F9eZrxsgqqJEeM2RoDE6pRA7frf0gW3MVrUVU_a-CZ9b5xTWUUf62iDYCNPCbK1MK5YPsBYKBc1HH9eoE1F3nEhvPSFOjRJAKrXjCQBMRgd_74doKBjqQxyOHZIiUwOrzSR-Uw6wqCjXgjZqFHS4za_0XhxCO13Yoi8pETgPFNd6jy39liVoeYRLxA3d1kfarBvZOkC6VPrBQba_SQ4mfc8Dd89-PzRGr1x297LD8iapKZbQg8msSESz_X9xbKa6g1NwUsGnrjvNGbGGO33XYhU3j1LgAj3i-Yq3uKVgoeFkpDV33GatupRuH0uqe9pIMlMr9Qcd-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/users/status/check",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"users",
+								"status",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resource Server status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJra19lRnFEM1NXSjBjeE5kdVFxdWpnc21Bb0UwVWN3aDFjX1Q0cXNWUG5VIn0.eyJleHAiOjE2NjkyMTkwMTAsImlhdCI6MTY2OTIxODcxMCwiYXV0aF90aW1lIjoxNjY5MjE4NjgyLCJqdGkiOiIxYzI4ZjBlZS1mNTVmLTRiOTEtYTI5My0wNmY0MTE0MjU0YTMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODEvcmVhbG1zL2FwcHNkZXZlbG9wZXJibG9nIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImI0M2NiMDMxLTAyNTItNGEwYi1hNWMxLTNkMDU0NzhhYjM5YyIsInR5cCI6IkJlYXJlciIsImF6cCI6InBob3RvLWFwcC1jb2RlLWZsb3ctY2xpZW50Iiwic2Vzc2lvbl9zdGF0ZSI6IjNmMzgzZTg3LTY4ZTEtNGRlNS05YzAwLTZhMDE3N2I0OTFmYyIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1hcHBzZGV2ZWxvcGVyYmxvZyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwic2lkIjoiM2YzODNlODctNjhlMS00ZGU1LTljMDAtNmEwMTc3YjQ5MWZjIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSmFtZXMgUm9vbmV5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiamFtZXN2cm9vbmV5IiwiZ2l2ZW5fbmFtZSI6IkphbWVzIiwiZmFtaWx5X25hbWUiOiJSb29uZXkiLCJlbWFpbCI6ImphbWVzdnJvb25leUBob3RtYWlsLmNvbSJ9.EbXgMfOISDoWj0QBQIZwCIPdjKwpz8iZNphPZAuf6xpDmeNr1pHShuUGSZ9bau7phZv9uILDnmeaR2hVTdhfadN1BHYyP9GrW2SoxVC4VS6gTVUkntVDSNOs6YrhvP9jtvvrgCq9jlTFbs7bVfHq035kxsaa1XKaVzMNC3UjdnhIjUCpA46H5JUdQN0RhF1SDPrOwaPHxMBIMiUBeMSPaZ1ZEKUit_7yJAksO_UXhuTCb06Cx87nXVhmULr4Pxq-9MgNaX-RyjYF_D81EsCo6VYths5lBZHV2MzF5OP13nI5trqFjgSHuYAuJbRr6z1fp0QjD7we7m2UqNx620zX_A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9898/users/status/check",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"users",
+								"status",
+								"check"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "[OAuth 2.0 in Spring Boot Applications](https://www.udemy.com/course/oauth2-in-spring-boot-applications/)"
 		}
 	]
 }
