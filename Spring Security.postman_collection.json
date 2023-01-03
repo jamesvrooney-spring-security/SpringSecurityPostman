@@ -137,7 +137,268 @@
 			"item": [
 				{
 					"name": "Spring Security Fundamentals - 2020",
-					"item": [],
+					"item": [
+						{
+							"name": "Lesson 01",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "johnboy",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 02",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "james",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 03",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "James",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add User",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"James\",\n    \"password\": \"password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/user",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 04",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "john",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 05",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "value",
+													"value": "secret",
+													"type": "string"
+												},
+												{
+													"key": "key",
+													"value": "x-api-key",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lesson 06",
+							"item": [
+								{
+									"name": "Demo",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
 					"description": "[Spring Security Fundamentals - 2020](https://www.youtube.com/playlist?list=PLEocw3gLFc8XRaRBZkhBEZ_R3tmvfkWZz)"
 				},
 				{
@@ -157,13 +418,13 @@
 											"type": "basic",
 											"basic": [
 												{
-													"key": "password",
-													"value": "password",
+													"key": "username",
+													"value": "bob",
 													"type": "string"
 												},
 												{
-													"key": "username",
-													"value": "james",
+													"key": "password",
+													"value": "password",
 													"type": "string"
 												}
 											]
