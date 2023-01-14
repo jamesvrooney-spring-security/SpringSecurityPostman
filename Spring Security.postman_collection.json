@@ -577,7 +577,7 @@
 											"basic": [
 												{
 													"key": "username",
-													"value": "bob",
+													"value": "james",
 													"type": "string"
 												},
 												{
@@ -1545,6 +1545,47 @@
 											"path": [
 												".well-known",
 												"openid-configuration"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "OAuth2 Introspection Endpoint",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "secret",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "client",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/oauth2/introspect?token",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"oauth2",
+												"introspect"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": null
+												}
 											]
 										}
 									},
