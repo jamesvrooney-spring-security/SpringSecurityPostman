@@ -640,6 +640,45 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "Hello Copy",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
