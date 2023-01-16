@@ -1675,7 +1675,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"description": "``` markdown\n# Spring Security: How to implement both Roles & Authorities in the DB\n[Spring Security: How to implement both Roles & Authorities in the DB](https://www.youtube.com/watch?v=96vK5BDpT7g)\n\n[Code on GitHub](https://github.com/lspil/youtubechannel/tree/master/ss_roles_authorities)\n\n```"
 				}
 			]
 		},
