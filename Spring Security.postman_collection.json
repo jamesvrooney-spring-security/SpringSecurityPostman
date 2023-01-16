@@ -1638,6 +1638,19 @@
 				{
 					"name": "Spring Security in Action | Book",
 					"item": []
+				},
+				{
+					"name": "Spring Security | Roles & Authorities in the DB",
+					"item": [
+						{
+							"name": "Hello",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
