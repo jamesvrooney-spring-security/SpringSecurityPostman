@@ -1643,10 +1643,35 @@
 					"name": "Spring Security | Roles & Authorities in the DB",
 					"item": [
 						{
-							"name": "Hello",
+							"name": "Demo",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "bob",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/demo",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"demo"
+									]
+								}
 							},
 							"response": []
 						}
