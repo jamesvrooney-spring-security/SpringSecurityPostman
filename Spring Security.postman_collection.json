@@ -680,7 +680,8 @@
 									},
 									"response": []
 								}
-							]
+							],
+							"description": "``` markdown\n# Spring Security Fundamentals 2022\n## Course Details\n[Spring Security Fundamentals 2022 | YouTube](https://www.youtube.com/playlist?list=PLEocw3gLFc8X_a8hGWGaBnSkPFJmbb8QP)\n## Lesson 05: Endpoint authorization - Part 1\n[Lesson 05 Video - Endpoint authorization - Part 1](https://www.youtube.com/watch?v=asAUMpEcdXw&list=PLEocw3gLFc8X_a8hGWGaBnSkPFJmbb8QP&index=5)\n[Code for Lesson 05 on GitHub](https://github.com/lspil/youtubechannel/tree/master/ss_2022_c5_e1)\n\n```"
 						},
 						{
 							"name": "Lesson 08",
