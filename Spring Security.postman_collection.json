@@ -610,7 +610,7 @@
 											"basic": [
 												{
 													"key": "username",
-													"value": "bobby",
+													"value": "bob",
 													"type": "string"
 												},
 												{
