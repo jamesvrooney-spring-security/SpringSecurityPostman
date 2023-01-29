@@ -577,7 +577,7 @@
 											"basic": [
 												{
 													"key": "username",
-													"value": "james",
+													"value": "john",
 													"type": "string"
 												},
 												{
@@ -610,7 +610,7 @@
 											"basic": [
 												{
 													"key": "username",
-													"value": "bob",
+													"value": "bobby",
 													"type": "string"
 												},
 												{
