@@ -1593,6 +1593,342 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "Lesson 15",
+							"item": [
+								{
+									"name": "Get access token | OAuth 2",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "redirect_uri",
+													"value": "https://springone.io/authorized",
+													"type": "string"
+												},
+												{
+													"key": "useBrowser",
+													"value": false,
+													"type": "boolean"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "http://localhost:8080/oauth2/token",
+													"type": "string"
+												},
+												{
+													"key": "authUrl",
+													"value": "http://localhost:8080/oauth2/authorize",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "JamesToken",
+													"type": "string"
+												},
+												{
+													"key": "scope",
+													"value": "openid",
+													"type": "string"
+												},
+												{
+													"key": "code_verifier",
+													"value": "MtrhkMEVqDsXVSzr4oJqW3kMFchRfgOIZ1TzjGsmIH4",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "secret",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "client",
+													"type": "string"
+												},
+												{
+													"key": "grant_type",
+													"value": "authorization_code_with_pkce",
+													"type": "string"
+												},
+												{
+													"key": "challengeAlgorithm",
+													"value": "S256",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "queryParams",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "headerPrefix",
+													"value": "Basic",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get access token | Basic Auth",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "secret",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "client",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://localhost:8080/oauth2/token?client_id=client&redirect_uri=https://springone.io/authorized&grant_type=authorization_code&code=D_RClSYG386RBGH__3z-tI3dTCxlfW6U3BgZaVtcrbqguhXiHC1giweUAcRkUS2dUhNxGE3ZKrgboVLx2xhkMcosgS88jqEr-KZiQcseHI8_oRkNqxJljZ5_EScX9j8e&code_verifier=MtrhkMEVqDsXVSzr4oJqW3kMFchRfgOIZ1TzjGsmIH4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"oauth2",
+												"token"
+											],
+											"query": [
+												{
+													"key": "client_id",
+													"value": "client"
+												},
+												{
+													"key": "redirect_uri",
+													"value": "https://springone.io/authorized"
+												},
+												{
+													"key": "grant_type",
+													"value": "authorization_code"
+												},
+												{
+													"key": "code",
+													"value": "D_RClSYG386RBGH__3z-tI3dTCxlfW6U3BgZaVtcrbqguhXiHC1giweUAcRkUS2dUhNxGE3ZKrgboVLx2xhkMcosgS88jqEr-KZiQcseHI8_oRkNqxJljZ5_EScX9j8e"
+												},
+												{
+													"key": "code_verifier",
+													"value": "MtrhkMEVqDsXVSzr4oJqW3kMFchRfgOIZ1TzjGsmIH4"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/authorize endpoint",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "addTokenTo",
+													"value": "queryParams",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/oauth2/authorize?client_id=client&grant_type=authorization_code&response_type=code&redirect_uri=https://springone.io/authorized&scope=openid&code_challenge_method=256&code_challenge=Q6XCYVI2KK6B14DF0EgAGIWS7WLXFEYscBXEMWwDS2k",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"oauth2",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "client_id",
+													"value": "client"
+												},
+												{
+													"key": "grant_type",
+													"value": "authorization_code"
+												},
+												{
+													"key": "response_type",
+													"value": "code"
+												},
+												{
+													"key": "redirect_uri",
+													"value": "https://springone.io/authorized"
+												},
+												{
+													"key": "scope",
+													"value": "openid"
+												},
+												{
+													"key": "code_challenge_method",
+													"value": "256"
+												},
+												{
+													"key": "code_challenge",
+													"value": "Q6XCYVI2KK6B14DF0EgAGIWS7WLXFEYscBXEMWwDS2k"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "keys",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/oauth2/jwks",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"oauth2",
+												"jwks"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Hello",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "bob",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "secret",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "localhost:8080/hello",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"hello"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "OpenId Configuration",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/.well-known/openid-configuration",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												".well-known",
+												"openid-configuration"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "OAuth2 Introspection Endpoint",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "secret",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "client",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/oauth2/introspect?token",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"oauth2",
+												"introspect"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					],
 					"description": "[Spring Security Fundamentals | Github](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmlKWUVROW9aNlB4UGxnT2tkQVVOZEZiSEFqd3xBQ3Jtc0trWmwtV1hJZTBVYVBabXQyb19rSUkyMGt0U1JCYmw1SUlEV09aUl81QVcxVDNkdzZGRXNvdUlJM2VhTTBMOEVOTjgtOUtiNVNPTHVJUWRIYUtQUVp3RFRPTEVZaGhCS2t4SGtLTXJVRTc5WGRWQ1VuWQ&q=https://github.com/lspil/youtubechannel/tree/master/ss_2022_c1_e1&v=nSu9ElsnNtY)\n\n[Spring Security Fundamentals - 2022](https://www.youtube.com/playlist?list=PLEocw3gLFc8X_a8hGWGaBnSkPFJmbb8QP)"
