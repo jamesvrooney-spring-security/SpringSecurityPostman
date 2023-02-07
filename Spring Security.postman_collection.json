@@ -1932,7 +1932,17 @@
 									"name": "Demo",
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo-test",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo-test"
+											]
+										}
 									},
 									"response": []
 								}
