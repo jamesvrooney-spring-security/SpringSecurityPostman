@@ -406,7 +406,16 @@
 					"item": [
 						{
 							"name": "Lesson 01",
-							"item": []
+							"item": [
+								{
+									"name": "New Request",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							]
 						},
 						{
 							"name": "Lesson 02",
@@ -1837,7 +1846,7 @@
 											"basic": [
 												{
 													"key": "username",
-													"value": "bob",
+													"value": "bobbby",
 													"type": "string"
 												},
 												{
