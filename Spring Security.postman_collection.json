@@ -408,10 +408,35 @@
 							"name": "Lesson 01",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "Demo",
 									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "james",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "password",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "localhost:8080/demo",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"demo"
+											]
+										}
 									},
 									"response": []
 								}
@@ -421,14 +446,14 @@
 							"name": "Lesson 02",
 							"item": [
 								{
-									"name": "test",
+									"name": "Demo",
 									"request": {
 										"auth": {
 											"type": "basic",
 											"basic": [
 												{
 													"key": "username",
-													"value": "bob",
+													"value": "bobby",
 													"type": "string"
 												},
 												{
